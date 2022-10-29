@@ -1,11 +1,11 @@
 import NavigationBar from "./components/NavigationBar";
 import "./styles.scss"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
   return (
     <div className="App">
       <NavigationBar />
-      <h1>Hello World!</h1>
     </div>
   );
 }
