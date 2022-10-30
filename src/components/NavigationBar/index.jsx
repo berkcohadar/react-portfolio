@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import Logo from "./logo/logo";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 
 const NavigationBar = () => {

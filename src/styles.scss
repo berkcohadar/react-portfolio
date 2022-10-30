@@ -1,5 +1,5 @@
-@import "./components/NavigationBar/index.scss";
-@import "./components/NavigationBar/logo/logo.scss";
+@import "./components/NavigationBar/index";
+@import "./components/MainBanner/index";
 
 /************ Default Css ************/
 * {
@@ -77,4 +77,14 @@ p.success {
 
 p.danger {
     color: red;
+}
+
+.main-background {
+    position: absolute;
+    z-index: -1;
+    opacity: .9;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    min-width: calc(100vh * 1.778);
 }
