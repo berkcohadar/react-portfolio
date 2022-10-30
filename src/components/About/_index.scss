@@ -1,6 +1,6 @@
 .main-banner {
     margin: 100px auto;
-
+    
     .main-banner-container{
         border-radius: 24px;
         padding: 40px 60px !important;
@@ -8,17 +8,69 @@
     }
 
     .main-banner-title {
-        font-weight: 700;
-        letter-spacing: 0.8px;
+        all: unset;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+        width: 200px;
         padding: 10px 20px;
-        border-radius: 80px;
+        border-radius: 12px;
         background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
         border: 1px solid rgba(255, 255, 255, 0.5);
-        font-size: 20px;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+        
         margin-bottom: 16px;
-        display: inline-block;
+        
+        p {
+            text-shadow: none;
+            color: #fff;
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: 2px;
+            line-height: 1.5em;
+            width: auto !important;
+            margin: 0;
+        }
+
+        svg {
+            font-size: 24px;
+            margin-left: 10px;
+            transition: 0.3s ease-in-out;
+            line-height: 1;
+        }
+        &:hover, &:active, &:focus {
+            filter: drop-shadow(0 0 0.5rem rgba(170, 54, 124, 0.8));
+            svg {
+                filter: drop-shadow(0 0 2rem rgba(74, 47, 189, 1));
+            }
+        }
+
     }
 
+    .main-banner-profile{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap:30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            overflow: hidden;
+            filter: drop-shadow(0 0 0.25rem rgba(74, 47, 189, 0.8));
+            img {
+                transform: translateY(-27px) translateX(-6px);
+                width: 100px;
+                zoom: 2.1;
+            }
+        }
+    }
+    
     h1 {
         font-size: 45px;
         font-weight: 700;
@@ -29,7 +81,8 @@
     }
 
     p {
-        color: #B8B8B8;
+        text-shadow: 0 0 6px #000;
+        color: #DDD;
         font-size: 18px;
         letter-spacing: 0.8px;
         line-height: 1.5em;
@@ -59,9 +112,9 @@
         }
     }
 
-    img {
-        animation: updown 3s linear infinite;
-    }
+    // img {
+    //     animation: updown 3s linear infinite;
+    // }
 
     @keyframes updown {
         0% {
@@ -82,7 +135,6 @@
         font-weight: 700;
         letter-spacing: 0.8px;
         line-height: 1;
-        margin-bottom: 20px;
         display: block;
         .main-banner-current-text {
             border-right: 0.08em solid #666;
@@ -95,6 +147,37 @@
         .main-banner-container{
             padding: 30px 20px !important;
             background: rgba(255,255,255,0.025);
+        }
+        .main-banner-title {
+            margin-left: auto !important;
+            margin-right: auto !important;
+            margin-bottom: 30px;
+            p {
+                font-size: 20px;
+            }
+            svg {
+                font-size: 22px;
+            }
+
+        }
+        .main-banner-profile{
+            gap:20px;
+        }
+        button {
+            display: none;
+        }
+        svg {
+            margin: -30px 0;
+        }
+        h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .main-banner-current-text{
+            font-size: 36px;
+        }
+        p {
+            font-size: 18px;
         }
     }
 }

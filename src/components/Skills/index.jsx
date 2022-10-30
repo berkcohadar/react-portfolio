@@ -39,7 +39,7 @@ export const Skills = () => {
           <Col>
           <div className="skills">
             <h2>Skills</h2>
-            <Carousel responsive={responsive} infinite={true} className="skills-slider">
+            <Carousel responsive={responsive} infinite={true} autoPlay={true} className="skills-slider">
                 <div className="skill">
                     <img src={react} alt=""/>
                     <h5>React.js</h5>

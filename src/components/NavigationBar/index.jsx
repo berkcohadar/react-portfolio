@@ -19,7 +19,7 @@ const NavigationBar = () => {
 
   useEffect(() => {
     const onScrollEvent = () => {
-      window.scrollY > 50 ? setScroll(true) : setScroll(false);
+      window.scrollY > 20 ? setScroll(true) : setScroll(false);
     };
     window.addEventListener("scroll", onScrollEvent);
     return () => {
@@ -28,7 +28,7 @@ const NavigationBar = () => {
   }, []);
 
   return (
-    <Navbar expand="md" className={`${scroll ? "scroll" : ""}`}>
+    <Navbar expand="md" className={`${scroll ? " scroll" : ""}`}>
       <Container>
         <Navbar.Brand href="#home">
           <FontAwesomeIcon icon={faCode} />

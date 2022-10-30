@@ -18,9 +18,12 @@
                 justify-content: flex-end !important;
                 align-items: center !important;
                 height: 100%;
-                gap: 10px;
+                gap: 20px;
+                padding: 20px 0;
+
                 img {
-                    width: 50%;
+                    height: 100px;
+                    width: auto;
                 }
             }
         }
@@ -35,6 +38,10 @@
         .skills-container{
             padding: 30px 20px !important;
             background: rgba(255,255,255,0.025);
+        }
+        h2 {
+            font-size: 35px !important;
+            font-weight: 700;
         }
     }
 }

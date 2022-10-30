@@ -1,14 +1,15 @@
 .navbar{
-    padding: 18px 0 !important;
-    position: fixed;
+    padding: 15px 0 25px 0 !important;
+    position: sticky !important;
     top: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 9999;
     background-color: rgba(255,255,255,0.025);
-    transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
+
 
     &.scroll {
-        padding: 0;
+        padding: 15px 0 15px 0 !important;
         background-color: #121212;
     }
 
@@ -201,6 +202,12 @@
                 background-color: #fff;
                 height: 2px;
             }
+        }
+    }
+    @media (max-width:768px) {
+        padding: 20px 0 !important;
+        &.scroll {
+            padding: 20px 0 !important;
         }
     }
 }
