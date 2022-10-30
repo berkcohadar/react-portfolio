@@ -28,7 +28,7 @@ const NavigationBar = () => {
   }, []);
 
   return (
-    <Navbar expand="md" className={`${scroll ? " scroll" : ""}`}>
+    <Navbar expand="lg" className={`${scroll ? " scroll" : ""}`}>
       <Container>
         <Navbar.Brand href="#home">
           <FontAwesomeIcon icon={faCode} />

@@ -55,7 +55,7 @@ export default function About() {
     <section className="main-banner" id="home">
       <Container className="main-banner-container">
         <Row className="align-items-center">
-          <Col className="main-banner-col" xs={12} md={6} xl={7}>
+          <Col className="main-banner-col" xs={12} sm={12}  md={6} xl={7}>
             <a
               href="https://www.github.com/berkcohadar"
               target="_blank"
@@ -91,7 +91,7 @@ export default function About() {
               Let's Connect! <FontAwesomeIcon icon={faArrowRight} />{" "}
             </button>
           </Col>
-          <Col xs={12} md={6} xl={5}>
+          <Col xs={12} sm={12} md={6} xl={5}>
             {/* <Hacker/> */}
             <SpaceHacker />
           </Col>
