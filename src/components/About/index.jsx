@@ -5,14 +5,13 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Hacker from '../animations/Hacker';
-import Background from "../animations/Background";
 
-export default function MainBanner() {
+export default function About() {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
-    const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+    const toRotate = [ "Web Dev"];
     const period = 500;
   
     useEffect(() => {

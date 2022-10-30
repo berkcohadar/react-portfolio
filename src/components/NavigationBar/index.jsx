@@ -19,7 +19,7 @@ const NavigationBar = () => {
 
   useEffect(() => {
     const onScrollEvent = () => {
-      window.scrollY > 50 ? setScroll(true) : setScroll(true);
+      window.scrollY > 50 ? setScroll(true) : setScroll(false);
     };
     window.addEventListener("scroll", onScrollEvent);
     return () => {

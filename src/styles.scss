@@ -1,5 +1,6 @@
 @import "./components/NavigationBar/index";
-@import "./components/MainBanner/index";
+@import "./components/About/index";
+@import "./components/Skills/index";
 
 /************ Default Css ************/
 * {
@@ -20,6 +21,11 @@ body {
     background-color: #121212 !important;
     color: #fff !important;
     font-family: 'Centra', sans-serif !important;
+    background-image: url('./assets/banner-bg.png');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 h1,

@@ -1,15 +1,17 @@
 import NavigationBar from "./components/NavigationBar";
 import "./styles.scss"
 import "bootstrap/dist/css/bootstrap.min.css"
-import MainBanner from "./components/MainBanner";
+import About from "./components/About";
 import Background from "./components/animations/Background";
+import { Skills } from "./components/Skills";
 
 function App() {
   return (
     <div className="App">
-      <Background/>
+      {/* <Background/> */}
       <NavigationBar />
-      <MainBanner/>
+      <About/>
+      <Skills/>
     </div>
   );
 }
