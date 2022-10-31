@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 import { Container, Row, Col } from "react-bootstrap";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Hacker from "../animations/Hacker";
-import SpaceHacker from "../animations/SpaceHacker";
+import SpaceHacker from "../LottieAnimations/SpaceHacker";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import me from "../../assets/me.jpeg";
-export default function About() {
+
+export default function Profile() {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");

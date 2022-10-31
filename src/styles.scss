@@ -1,9 +1,16 @@
+/************ Variables ************/
+$purple-filter: drop-shadow(0 0 0.5rem lighten(rgba(170, 54, 124, 0.6), 10%));
+$blue-filter: drop-shadow(0 0 0.5rem lighten(rgba(#0072b1, 0.6), 10%));
+$main-shadow: 0 0 3px 0 #fff;;
+$purple-gradient: linear-gradient(90.21deg, rgba(170, 54, 124, 0.6) -5.91%, rgba(74, 47, 189, 0.8) 111.58%);
+$blue-gradient: linear-gradient(90.21deg, rgba(lighten(#0072b1, 30%), 0.3) -5.91%, rgba(#0072b1, 0.8) 111.58%);
+
+/************ Component Styles ************/
 @import "./components/NavigationBar/index";
-@import "./components/About/index";
+@import "./components/Profile/index";
 @import "./components/Skills/index";
 
-/************ Default Css ************/
-
+/************ Fonts ************/
 @font-face {
 	font-family: Centra;
 	src: url('./assets/font/CentraNo2-Bold.ttf');
@@ -20,6 +27,7 @@
 	font-weight: 400;
 }
 
+/************ Global Styles ************/
 * {
     margin: 0;
     padding: 0;
@@ -92,12 +100,4 @@ select:focus {
         max-width: 100%;
         padding: 0 150px;
     }
-}
-
-p.success {
-    color: green;
-}
-
-p.danger {
-    color: red;
 }
