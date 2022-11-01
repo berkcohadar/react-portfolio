@@ -10,7 +10,7 @@ import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("Home");
+  const [currentPage, setCurrentPage] = useState("");
   const component = useRef(null);
 
   const executeScroll = () => {
@@ -22,7 +22,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(currentPage);
     executeScroll();
   }, [currentPage]);
 
