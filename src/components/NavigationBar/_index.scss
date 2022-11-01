@@ -1,5 +1,5 @@
 .navbar{
-    padding: 15px 0 25px 0 !important;
+    padding: 25px 0 35px 0 !important;
     position: sticky !important;
     top: 0;
     width: 100%;
@@ -9,8 +9,11 @@
 
 
     &.scroll {
-        padding: 15px 0 15px 0 !important;
+        padding: 15px 0 25px 0 !important;
         background-color: #121212;
+        .navbar-social .navbar-social-icons a::after {
+            bottom: -20px;
+        }
     }
 
     .navbar-nav{
