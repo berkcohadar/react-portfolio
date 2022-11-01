@@ -1,29 +1,3 @@
-.footer-section{
-    margin-top: 100px;
-    padding: 100px 40px 40px 40px;
-    background-color: rgba(255,255,255,0.05);
-    p {
-        max-width: max-content;
-        margin: auto;
-        margin-top: 60px;
-    }
-    @media (max-width:768px) {
-        padding: 60px 20px 30px 20px;
-        .footer-body{
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            * {
-                width: fit-content;
-            }
-        }
-        p {
-            margin-top: 60px;
-            text-align: center;
-        }
-    }
-}
 
 .navbar-social{
     .navbar-social-icons{
@@ -109,7 +83,7 @@
     }
 
     span {
-        margin-top: -7px;
+        margin-top: -5px;
         &::before {
             position: absolute;
             content: "berk.cohadar";
@@ -129,6 +103,36 @@
         }
         svg {
             filter: $blue-filter;
+        }
+    }
+}
+
+.footer-section{
+    margin-top: 100px;
+    padding: 100px 40px 40px 40px;
+    background-color: rgba(255,255,255,0.05);
+    p {
+        max-width: max-content;
+        margin: auto;
+        margin-top: 60px;
+    }
+    @media (max-width:768px) {
+        padding: 60px 20px 30px 20px;
+        .footer-body{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            .navbar-brand{
+                width: 180px;
+            }
+            * {
+                width: fit-content;
+            }
+        }
+        p {
+            margin-top: 60px;
+            text-align: center;
         }
     }
 }
