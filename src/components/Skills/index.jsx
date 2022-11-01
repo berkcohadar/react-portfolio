@@ -40,32 +40,32 @@ export const Skills = () => {
             <h2>Skills</h2>
             <Carousel responsive={responsive} infinite={true} autoPlay={true} className="skills-slider">
                 <div className="skill">
-                    <img src={react} alt=""/>
+                    <img src={react} alt="React.js"/>
                     <h5>React.js</h5>
                 </div>
                 <div className="skill">
-                    <img src={next} alt=""/>
+                    <img src={next} alt="Next.js"/>
                     <h5>Next.js</h5>
                 </div>
                 <div className="skill">
-                    <img src={python} alt=""/>
+                    <img src={python} alt="Python"/>
                     <h5>Python</h5>
                 </div>
                 <div className="skill">
-                    <img src={typeScript} alt=""/>
+                    <img src={typeScript} alt="TypeScript"/>
                     <h5>TypeScript</h5>
                 </div>
 
                 <div className="skill">
-                    <img src={django} alt=""/>
+                    <img src={django} alt="Django REST Framework"/>
                     <h5>Django REST</h5>
                 </div>
                 <div className="skill">
-                    <img src={javaScript} alt=""/>
+                    <img src={javaScript} alt="JavaScript"/>
                     <h5>JavaScript</h5>
                 </div>
                 <div className="skill">
-                    <img src={sass} alt=""/>
+                    <img src={sass} alt="SASS SCSS"/>
                     <h5>SASS</h5>
                 </div>
             </Carousel>

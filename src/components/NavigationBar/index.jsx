@@ -4,8 +4,9 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faCode, faFileDownload } from "@fortawesome/free-solid-svg-icons";
+import resume from "../../assets/resume/FEE.pdf";
 
-const NavigationBar = ({currentPage, setCurrentPage}) => {
+const NavigationBar = ({ currentPage, setCurrentPage }) => {
   const [scroll, setScroll] = useState(false);
 
   const handleContact = () => {
@@ -56,7 +57,6 @@ const NavigationBar = ({currentPage, setCurrentPage}) => {
                 href="#skills"
                 onClick={() => handlePageUpdate("Skills")}
                 datacustomattribute="Skills"
-
               >
                 Skills
               </Nav.Link>
@@ -73,13 +73,17 @@ const NavigationBar = ({currentPage, setCurrentPage}) => {
             </div>
             <span className="navbar-social">
               <div className="navbar-social-icons">
-              <a href="#" link-title="Download My Resume">
+                <a
+                  href={resume}
+                  download="Berk_Cohadar_Resume"
+                  link-title="Download My Resume"
+                >
                   <FontAwesomeIcon icon={faFileDownload} />
                 </a>
-                <a href="#">
+                <a href="https://www.linkedin.com/in/cohadarberk/" target="_blank">
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
-                <a href="#">
+                <a href="https://github.com/berkcohadar" target="_blank">
                   <FontAwesomeIcon icon={faGithub} />
                 </a>
               </div>
