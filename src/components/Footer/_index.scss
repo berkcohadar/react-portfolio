@@ -49,7 +49,7 @@
                 transition: all .3s ease-in-out;
             }
 
-            &:first-child::before{
+            &:first-child::before, &:nth-child(2)::before{
                 background: $blue-gradient;
                 filter: $blue-filter;
             }
