@@ -4,11 +4,16 @@ $blue-filter: drop-shadow(0 0 0.5rem lighten(rgba(#0072b1, 0.6), 10%));
 $main-shadow: 0 0 3px 0 #fff;;
 $purple-gradient: linear-gradient(90.21deg, rgba(170, 54, 124, 0.6) -5.91%, rgba(74, 47, 189, 0.8) 111.58%);
 $blue-gradient: linear-gradient(90.21deg, rgba(lighten(#0072b1, 30%), 0.3) -5.91%, rgba(#0072b1, 0.8) 111.58%);
+$blue-gradient2: linear-gradient(90.21deg, rgba(lighten(#0072b1, 30%), 0.6) -5.91%, rgba(#0072b1, 0.8) 111.58%);
 
 /************ Component Styles ************/
 @import "./components/NavigationBar/index";
 @import "./components/Profile/index";
 @import "./components/Skills/index";
+@import "./components/Projects/index";
+@import "./components/Projects/ProjectCard/index";
+@import "./components/Footer/index";
+
 
 /************ Fonts ************/
 @font-face {

@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faFileDownload } from "@fortawesome/free-solid-svg-icons";
 
-const NavigationBar = () => {
-  const [currentPage, setCurrentPage] = useState("Home");
+const NavigationBar = ({currentPage, setCurrentPage}) => {
   const [scroll, setScroll] = useState(false);
 
   const handleContact = () => {
@@ -46,6 +45,7 @@ const NavigationBar = () => {
                 }`}
                 href="#home"
                 onClick={() => handlePageUpdate("Home")}
+                datacustomattribute="Home"
               >
                 Home
               </Nav.Link>
@@ -55,6 +55,8 @@ const NavigationBar = () => {
                 }`}
                 href="#skills"
                 onClick={() => handlePageUpdate("Skills")}
+                datacustomattribute="Skills"
+
               >
                 Skills
               </Nav.Link>
@@ -64,13 +66,16 @@ const NavigationBar = () => {
                 }`}
                 href="#projects"
                 onClick={() => handlePageUpdate("Projects")}
+                datacustomattribute="Projects"
               >
                 Projects
               </Nav.Link>
             </div>
-
             <span className="navbar-social">
               <div className="navbar-social-icons">
+              <a href="#" link-title="Download My Resume">
+                  <FontAwesomeIcon icon={faFileDownload} />
+                </a>
                 <a href="#">
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
@@ -80,12 +85,14 @@ const NavigationBar = () => {
               </div>
             </span>
             <div className="navbar-contact">
-              <button
-                className="navbar-contact-me"
-                onClick={() => handleContact()}
-              >
-                <span>Contact Me!</span>
-              </button>
+              <a href="mailto:berkcohadar1@gmail.com">
+                <button
+                  className="navbar-contact-me"
+                  onClick={() => handleContact()}
+                >
+                  <span>Contact Me!</span>
+                </button>
+              </a>
             </div>
           </Nav>
         </Navbar.Collapse>

@@ -29,15 +29,37 @@
         text-align: center;
         gap: 10px;
         transition: all .3s ease-in-out;
+        border-radius: 12px;
+        position: relative;
 
         * {
             height: 23px;
-        }
-        span {
-            margin-top: 1px;
-        }
-        &:hover {
             color: #fff;
+            transition: all .3s ease-in-out;
+        }
+
+        span {
+            margin-top: -3px;
+            &::before {
+                position: absolute;
+                content: "berk.cohadar";
+                background: $blue-gradient2;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                opacity: 0;
+                transition: all .3s ease-in-out;
+            }
+        }
+
+
+        &:hover {
+            span::before {
+                opacity: 1;
+                filter: $blue-filter;
+            }
+            svg {
+                filter: $blue-filter;
+            }
         }
     }
     .navbar-links{
@@ -55,18 +77,43 @@
             padding: 5px 25px;
             font-size: 18px;
             opacity: 0.6;
-            border-bottom: 1px solid transparent;
             transition: all .3s ease-in-out;
+            position: relative;
+    
+            &::before{
+                position: absolute;
+                content: attr(datacustomattribute);
+                background: $blue-gradient2;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                opacity: 0;
+                transition: all .3s ease-in-out;
+            }
+
+            &::after {
+                display: block;
+                position: relative;
+                top: 5px;
+                left: -5px;
+                width: calc(100% + 10px);
+                height: 3px;
+                content: "";
+                background: $blue-gradient2;
+                opacity: 0;
+                transition: all .3s ease-in-out;
+            }
+
             &.active {
                 opacity: 1;
+                &::after, &::before{
+                    opacity: 1;
+                }
             }
-            &:hover {
-                border-color: #fff;
+            &:hover, &:hover::before, &:hover::after {
                 opacity: 1;
             }
         }
     }
-
 
     .navbar-social{
         display: flex;
@@ -158,7 +205,6 @@
         }
     }
     
-
     .navbar-toggler:active,
     .navbar-toggler:focus {
         outline: none;
@@ -194,6 +240,7 @@
             transition: all 300ms linear;
         }
     }
+
     .navbar-toggler[aria-expanded="true"]{
         .navbar-toggler-icon{
             border-color: transparent;
@@ -209,10 +256,17 @@
             }
         }
     }
+
     @media (max-width:992px) {
         padding: 20px 0 !important;
         &.scroll {
             padding: 20px 0 !important;
+        }
+        .navbar-links{
+            padding-top: 20px;
+        }
+        .navbar-contact, .navbar-social {
+            display: none;
         }
     }
 }

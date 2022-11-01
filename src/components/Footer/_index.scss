@@ -1,0 +1,118 @@
+.footer-section{
+    margin-top: 100px;
+    padding: 100px 40px 40px 40px;
+    background-color: rgba(255,255,255,0.025);
+    p {
+        max-width: max-content;
+        margin: auto;
+        margin-top: 60px;
+    }
+}
+
+.navbar-social{
+    .navbar-social-icons{
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+        a {
+            width: 50px;
+            height: 50px;
+            background: rgba(217,217,217,0.1);
+            display: inline-flex;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            box-shadow: 0 0 3px 0 #fff;
+            position: relative;
+            &::before {
+                content: "";
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                border-radius: 50%;
+                background: $purple-gradient;
+                filter: $purple-filter;
+                transform: scale3d(0,0,1);
+                transition: all .3s ease-in-out;
+            }
+
+            &::after{
+                pointer-events: none;
+                content: attr(link-title);
+                color: #fff;
+                filter: $blue-filter;
+                position: absolute;
+                bottom: -30px;
+                width: max-content;
+                opacity: 0;
+                transition: all .3s ease-in-out;
+            }
+
+            &:first-child::before{
+                background: $blue-gradient;
+                filter: $blue-filter;
+            }
+            &:hover {
+                &::before{
+                    transform: scale(1);
+                }
+                &::after{
+                    opacity: 1;
+                }
+            }
+            svg {
+                font-size: 26px;
+                color: #fff;
+                z-index: 1;
+                transition: .3s ease-in-out;
+            }
+        }
+
+    }
+}
+
+.navbar-brand {
+    color: #fff;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    transition: all .3s ease-in-out;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+
+    * {
+        height: 23px;
+        color: #fff;
+        transition: all .3s ease-in-out;
+        font-size: 18px;
+    }
+
+    span {
+        margin-top: -7px;
+        &::before {
+            position: absolute;
+            content: "berk.cohadar";
+            background: $blue-gradient2;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            transition: all .3s ease-in-out;
+        }
+    }
+
+
+    &:hover {
+        span::before {
+            opacity: 1;
+            filter: $blue-filter;
+        }
+        svg {
+            filter: $blue-filter;
+        }
+    }
+}
