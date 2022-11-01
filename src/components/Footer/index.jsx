@@ -8,12 +8,12 @@ export default function Footer() {
   return (
     <footer className="footer-section">
       <Container>
-        <Row>
-          <Col className="navbar-brand" sm={6}>
+        <Row className="footer-body">
+          <Col className="navbar-brand" sm={12}>
             <FontAwesomeIcon icon={faCode} />
             <span>berk.cohadar</span>
           </Col>
-          <Col className="text-center text-sm-end">
+          <Col className="text-center text-sm-end" sm={12}>
             <span className="navbar-social">
               <div className="navbar-social-icons">
                 <a
