@@ -27,8 +27,8 @@ export default function Projects() {
       url: "https://berkcohadar.github.io/react-climate-app/",
     },
     {
-      title: "Star Wars Planets",
-      description: (<p> Fun project. Star Wars Planets & Residents <br /> React.js, HTML/SASS, React Hooks, Axios </p>),
+      title: "Star Wars Wiki",
+      description: (<p> Fun wiki project. Star Wars Planets & Residents <br /> React.js, HTML/SASS, React Hooks, Axios </p>),
       img: starWars,
       url: "https://berkcohadar.github.io/react-star-wars-planets/",
     },
