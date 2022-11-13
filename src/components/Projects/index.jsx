@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import bto from "../../assets/projects/bto-store.png";
 import arbol from "../../assets/projects/arbol-dashboard.png";
+import starWars from "../../assets/projects/star-wars.png";
 
 import partisepeti from "../../assets/projects/partisepeti-desktop2.png";
 import ProductCard from "./ProjectCard";
@@ -14,16 +15,22 @@ export default function Projects() {
       url: "https://marketplace.scistoneprojects.com",
     },
     {
+      title: "btostore.co",
+      description: (<p> E-commerce landing page. <br /> React.js, HTML/SASS, Ajax, React Hooks </p>),
+      img: bto,
+      url: "https://btostore.co",
+    },
+    {
       title: "Global Climate Analytics Dashboard",
       description: (<p> Climate data analytics UI. <br /> React.js, Chart.js, MongoDB, HTML/SASS <br /> React Hooks,  Axios </p>),
       img: arbol,
       url: "https://berkcohadar.github.io/react-climate-app/",
     },
     {
-      title: "btostore.co",
-      description: (<p> E-commerce landing page. <br /> React.js, HTML/SASS, Ajax, React Hooks </p>),
-      img: bto,
-      url: "https://btostore.co",
+      title: "Star Wars Planets",
+      description: (<p> Fun project. Star Wars Planets & Residents <br /> React.js, HTML/SASS, React Hooks, Axios </p>),
+      img: starWars,
+      url: "https://berkcohadar.github.io/react-star-wars-planets/",
     },
   ];
   return (
