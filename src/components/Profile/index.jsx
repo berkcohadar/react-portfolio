@@ -5,13 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SpaceHacker from "../LottieAnimations/SpaceHacker";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import me from "../../assets/me.jpeg";
+import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
+import resume from "../../assets/resume/FEE.pdf"
 
 export default function Profile() {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const toRotate = ["Frontend Engineer"];
+  const toRotate = ["Software Engineer"];
   const period = 100;
 
   useEffect(() => {
@@ -55,14 +57,6 @@ export default function Profile() {
       <Container className="main-banner-container">
         <Row className="align-items-center">
           <Col className="main-banner-col" xs={12} sm={12} md={6} xl={7}>
-            <a
-              href="https://www.github.com/berkcohadar"
-              target="_blank"
-              className="main-banner-github"
-            >
-              <p>Github</p>
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
             <div className="main-banner-profile">
               <div className="profile-image">
                 <img src={me}></img>
@@ -88,26 +82,56 @@ export default function Profile() {
               <span className="main-banner-current-text">{text}</span>
             </span>
             <p>
-              Focusing on mobile-first web development. 2+ years of solid
+              Focusing on mobile-first web development. <strong>4+ years</strong> of solid
               experience working with React.js, Next.js, and Python Django.
-              Proficient in responsive design, adaptive design, UI/UX design,
-              API design, and database design. Goal-oriented and quick-learner.
+              <ul className="main-banner-list-area">
+                <li>UI/UX Design</li>
+                <li>Responsive Design</li>
+                <li>API Architecture</li>
+                <li>Database Modelling</li>
+                <li>Automated UI Testing</li>
+              </ul>
             </p>
-            <div className="main-banner-connect">
-              <a
-                href="https://www.linkedin.com/in/cohadarberk/"
-                target="_blank"
-              >
-                <button onClick={() => handleContact()}>
-                  Let's Connect!
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </button>
-              </a>
-            </div>
           </Col>
           <Col xs={12} sm={12} md={6} xl={5}>
             {/* <Hacker/> */}
             <SpaceHacker />
+          </Col>
+        </Row>
+        <Row className="main-banner-buttons">
+          <Col className="main-banner-btn" xs={12} sm={12} md={6} xl={4}>
+            <div>
+              <a
+                href="https://www.linkedin.com/in/cohadarberk/"
+                target="_blank"
+                className="main-banner-connect"
+                onClick={() => handleContact()}
+              >
+                <p>Let's Connect!</p>
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+            </div>
+          </Col>
+          <Col className="main-banner-btn" xs={12} sm={12} md={6} xl={4}>
+            <a
+              href="https://www.github.com/berkcohadar"
+              target="_blank"
+              className="main-banner-github"
+            >
+              <p>Github</p>
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+          </Col>
+          <Col className="main-banner-btn" xs={12} sm={12} md={12} xl={4}>
+            <a
+              href={resume}
+              download="Berk_Cohadar_Resume"
+              link-title="Download My Resume"
+              className="main-banner-resume"
+            >
+              <p>Resume</p>
+              <FontAwesomeIcon icon={faFileDownload} />
+            </a>
           </Col>
         </Row>
       </Container>

@@ -48,26 +48,25 @@ export const Skills = () => {
                     <h5>Next.js</h5>
                 </div>
                 <div className="skill">
-                    <img src={python} alt="Python"/>
-                    <h5>Python</h5>
-                </div>
-                <div className="skill">
                     <img src={typeScript} alt="TypeScript"/>
                     <h5>TypeScript</h5>
-                </div>
-
-                <div className="skill">
-                    <img src={django} alt="Django REST Framework"/>
-                    <h5>Django REST</h5>
                 </div>
                 <div className="skill">
                     <img src={javaScript} alt="JavaScript"/>
                     <h5>JavaScript</h5>
                 </div>
                 <div className="skill">
+                    <img src={python} alt="Python"/>
+                    <h5>Python</h5>
+                </div>
+                <div className="skill">
+                    <img src={django} alt="Django REST Framework"/>
+                    <h5>Django REST</h5>
+                </div>
+                {/* <div className="skill">
                     <img src={sass} alt="SASS SCSS"/>
                     <h5>SASS</h5>
-                </div>
+                </div> */}
             </Carousel>
           </div>
           </Col>

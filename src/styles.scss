@@ -1,8 +1,12 @@
 /************ Variables ************/
+$main-shadow: 0 0 3px 0 #fff;;
+
 $purple-filter: drop-shadow(0 0 0.5rem lighten(rgba(170, 54, 124, 0.6), 10%));
 $blue-filter: drop-shadow(0 0 0.5rem lighten(rgba(#0072b1, 0.6), 10%));
-$main-shadow: 0 0 3px 0 #fff;;
+$yellow-filter: drop-shadow(0 0 0.5rem rgba(#f7df1e, 0.6));
+
 $purple-gradient: linear-gradient(90.21deg, rgba(170, 54, 124, 0.6) -5.91%, rgba(74, 47, 189, 0.8) 111.58%);
+$yellow-gradient: linear-gradient(90.21deg, rgba(#f7df1e, 0.5) 5.91%, rgba(#e8c300, 1) 121.58%);
 $blue-gradient: linear-gradient(90.21deg, rgba(lighten(#0072b1, 30%), 0.3) -5.91%, rgba(#0072b1, 0.8) 111.58%);
 $blue-gradient2: linear-gradient(90.21deg, rgba(lighten(#0072b1, 30%), 0.6) -5.91%, rgba(#0072b1, 0.8) 111.58%);
 

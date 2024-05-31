@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import resume from "../../assets/resume/FEE.pdf"
+
 export default function Footer() {
   return (
     <footer className="footer-section">

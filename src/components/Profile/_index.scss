@@ -3,58 +3,111 @@
     margin: 0 auto;
     padding-top:100px !important;
 
+    .main-banner-buttons{
+        width: 100%;
+        display: flex;
+        .main-banner-btn{
+            display: flex;
+            justify-content: center;
+            margin-top:20px;
+            margin-bottom: 20px;
+
+            a {
+                all: unset;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 300px;
+                padding: 10px 0;
+                border-radius: 12px;
+                transition: all .3s ease-in-out;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                cursor: pointer;
+                p {
+                    text-shadow: none;
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 22px;
+                    letter-spacing: 2px;
+                    line-height: 1.5em;
+                    width: auto !important;
+                    margin: 0;
+                }
+        
+                svg {
+                    font-size: 24px;
+                    margin-left: 10px;
+                    transition: 0.3s ease-in-out;
+                    line-height: 1;
+                }
+            }
+
+            .main-banner-github {
+                background: $purple-gradient;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    filter: $purple-filter;
+                    svg {
+                        filter: $purple-filter;
+                    }
+                }
+            }
+
+            .main-banner-connect {      
+                background: $blue-gradient;
+        
+                &:hover,
+                &:active,
+                &:focus {
+                    filter: $blue-filter;
+                    svg {
+                        filter: $blue-filter;
+                    }
+                }
+            }
+
+            .main-banner-resume{
+                background: $yellow-gradient;
+        
+                &:hover,
+                &:active,
+                &:focus {
+                    filter: $yellow-filter;
+                    svg {
+                        filter: $yellow-filter;
+                    }
+                }
+            }
+
+        }
+
+        @media (max-width:992px) {    
+            .main-banner-btn {    
+                p {
+                    font-size: 20px;
+                }
+    
+                svg {
+                    font-size: 22px;
+                }
+    
+            }
+        }
+    }
+
     .main-banner-container {
         border-radius: 24px;
         padding: 40px 60px !important;
         background: rgba(255, 255, 255, 0.025);
     }
 
-    .main-banner-github {
-        all: unset;
+    .main-banner-list-area{
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-left: auto;
-        margin-right: 0;
-
-        width: 200px;
-        padding: 10px 20px;
-        border-radius: 12px;
-        background: $purple-gradient;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        transition: all .3s ease-in-out;
-        cursor: pointer;
-
-        margin-bottom: 60px;
-
-        p {
-            text-shadow: none;
-            color: #fff;
-            font-weight: 700;
-            font-size: 22px;
-            letter-spacing: 2px;
-            line-height: 1.5em;
-            width: auto !important;
-            margin: 0;
-        }
-
-        svg {
-            font-size: 24px;
-            margin-left: 10px;
-            transition: 0.3s ease-in-out;
-            line-height: 1;
-        }
-
-        &:hover,
-        &:active,
-        &:focus {
-            filter: $purple-filter;
-            svg {
-                filter: $purple-filter;
-            }
-        }
-
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
     }
 
     .main-banner-profile {
@@ -106,57 +159,6 @@
         width: 96%;
     }
 
-    .main-banner-connect {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        margin-top: 120px;
-        transition: all .3s ease-in-out;
-
-        a {
-            all: unset;
-        }
-
-        button {
-            color: #fff;
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            font-weight: 700;
-            font-size: 22px;
-            letter-spacing: 2px;
-            line-height: 1.5em;
-            gap: 10px;
-            padding: 10px 20px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            margin-top: 10px;
-            background: $blue-gradient;
-            ;
-        }
-
-
-        svg {
-            color: #fff;
-            font-size: 24px;
-            margin-left: 10px;
-            transition: 0.3s ease-in-out;
-            line-height: 1;
-        }
-
-        &:hover,
-        &:active,
-        &:focus {
-            filter: $blue-filter;
-        }
-    }
-
-    // img {
-    //     animation: updown 3s linear infinite;
-    // }
-
     @keyframes updown {
         0% {
             transform: translateY(-20px);
@@ -187,17 +189,7 @@
         }
     }
 
-    @media (max-width:1200px) {
-        .main-banner-github {
-            margin-left: 0;
-            margin-right: auto;
-        }
 
-        .main-banner-connect {
-            justify-content: flex-start;
-        }
-
-    }
 
     @media (max-width:992px) {
         margin: 30px 0;
@@ -206,21 +198,6 @@
         .main-banner-container {
             padding: 30px 20px !important;
             background: rgba(255, 255, 255, 0.025);
-        }
-
-        .main-banner-github {
-            margin-left: auto !important;
-            margin-right: auto !important;
-            margin-bottom: 30px;
-
-            p {
-                font-size: 20px;
-            }
-
-            svg {
-                font-size: 22px;
-            }
-
         }
 
         .main-banner-text-anim {
@@ -233,11 +210,6 @@
             &.mobile {
                 display: block;
             }
-        }
-
-        .main-banner-connect {
-            justify-content: center;
-            margin-top: 30px;
         }
 
         .main-banner-profile {
