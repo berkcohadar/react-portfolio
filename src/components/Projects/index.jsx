@@ -9,16 +9,16 @@ import ProductCard from "./ProjectCard";
 export default function Projects() {
   const projects = [
     {
-      title: "partisepeti.com",
+      title: "Multi-vendor E-commerce Platform",
       description: (<p> Multi-vendor e-commerce web application. <br /> React.js, Next.js, Python Django, HTML/SASS <br /> React Hooks, Redux.js, Toastify.js, Axios </p>),
       img: partisepeti,
-      url: "https://marketplace.scistoneprojects.com",
+      url: "#",
     },
     {
-      title: "btostore.co",
+      title: "Amazon Vendor Web App",
       description: (<p> E-commerce landing page. <br /> React.js, HTML/SASS, Ajax, React Hooks </p>),
       img: bto,
-      url: "https://btostore.co",
+      url: "#",
     },
     {
       title: "Global Climate Analytics Dashboard",
